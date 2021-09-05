@@ -47,7 +47,7 @@ reply_kb_yes_no_for_products = telebot.types.ReplyKeyboardMarkup(resize_keyboard
 
 # процедура книги
 def book_answerer(message):
-    doc = open('/home/ESPodymov/PM book trial.docx', 'rb')
+    doc = open('PM book trial.docx', 'rb')
     bot.send_document(message.chat.id, doc, caption='Этот файл специально для вас!')
     bot.send_message(message.chat.id, '{}, вас заинтересовала пробная книга?🤔'.format(message.from_user.first_name), reply_markup=reply_kb_yes_no_for_products)
 
@@ -92,7 +92,7 @@ def try_your_luck(message):
     number = random.randint(1, 10000)
     control_number = random.randint(1, 10000)
     if number == control_number:
-        doc_full = open('/home/ESPodymov/PM full book.docx', 'rb')
+        doc_full = open('PM full book.docx', 'rb')
         lucky_message = """Вау, вот это удача🤯🥴
 С такими как вы можно и разориться📉"""
         bot.send_message(message.chat.id, lucky_message)
@@ -115,9 +115,9 @@ def try_your_luck(message):
 
 #процедура вопроса
 def question(message):
-    bot.send_photo(message.chat.id, open('/home/ESPodymov/photo1.jpeg','rb'), "1️⃣")
-    bot.send_photo(message.chat.id, open('/home/ESPodymov/photo2.jpeg','rb'), "2️⃣")
-    bot.send_photo(message.chat.id, open('/home/ESPodymov/photo3.jpeg','rb'), "3️⃣")
+    bot.send_photo(message.chat.id, open('photo1.jpeg','rb'), "1️⃣")
+    bot.send_photo(message.chat.id, open('photo2.jpeg','rb'), "2️⃣")
+    bot.send_photo(message.chat.id, open('photo3.jpeg','rb'), "3️⃣")
     bot.send_message(message.chat.id, "Какая из работ лучше?🧐", reply_markup=relpy_kb_answers)# дописать добавив фото, потом объявиьт все текста в обработке текстов
 
 #процедура ответа
