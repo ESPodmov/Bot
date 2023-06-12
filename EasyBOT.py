@@ -1,8 +1,9 @@
 import telebot
 import time
 import random
+import config
 
-token = "1900972483:AAEZZWV9DVAIy1yRCws7NL4pZoo3sH4CBk4"
+token = config.TOKEN
 
 bot = telebot.TeleBot(token)
 
